@@ -104,6 +104,16 @@ This is the easiest path if you do not want to deploy from your own terminal.
 cargo install -q worker-build && worker-build --release
 ```
 
+or
+
+```bash
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+. "$HOME/.cargo/env"
+rustup target add wasm32-unknown-unknown
+cargo install -q worker-build --version 0.7.5
+worker-build --release
+```
+
 5. Set the deploy command to:
 
 ```bash
