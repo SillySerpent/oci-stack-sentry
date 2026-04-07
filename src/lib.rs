@@ -1181,7 +1181,7 @@ fn js_value_to_string(value: JsValue) -> String {
     if let Some(text) = value.as_string() {
         return text;
     }
-    if let Ok(js_string) = value.dyn_into::<JsString>() {
+    if let Ok(js_string) = value.clone().dyn_into::<JsString>() {
         return js_string.into();
     }
     format!("{:?}", value)
