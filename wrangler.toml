@@ -1,0 +1,17 @@
+name = "oci-stack-sentry"
+main = "build/worker/shim.mjs"
+compatibility_date = "2026-04-07"
+workers_dev = true
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
+
+[triggers]
+crons = ["* * * * *"]
+
+# Optional but recommended if you want persisted backoff/notification state.
+# Replace the ids after creating a KV namespace in Cloudflare.
+# [[kv_namespaces]]
+# binding = "STATE_KV"
+# id = "REPLACE_WITH_PRODUCTION_KV_NAMESPACE_ID"
+# preview_id = "REPLACE_WITH_PREVIEW_KV_NAMESPACE_ID"

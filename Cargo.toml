@@ -1,0 +1,24 @@
+[package]
+name = "oci-stack-sentry"
+version = "0.1.0"
+edition = "2021"
+description = "Capacity-aware Cloudflare Worker for Oracle OCI Resource Manager stack automation"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+base64 = "0.22"
+js-sys = "0.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+wasm-bindgen = "0.2"
+worker = "0.5"
+
+[profile.release]
+lto = true
+opt-level = "s"
+codegen-units = 1
+panic = "abort"
+strip = true

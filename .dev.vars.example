@@ -1,0 +1,26 @@
+OCI_TENANCY_OCID=ocid1.tenancy.oc1..example
+OCI_USER_OCID=ocid1.user.oc1..example
+OCI_FINGERPRINT=aa:bb:cc:dd:ee:ff:11:22:33:44:55:66:77:88:99:00
+OCI_REGION=ap-sydney-1
+OCI_STACK_OCID=ocid1.ormstack.oc1.ap-sydney-1.example
+OCI_PRIVATE_KEY_PEM="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----"
+
+# Optional but strongly recommended for smarter gating:
+ENABLE_CAPACITY_GATE=true
+OCI_COMPARTMENT_OCID=ocid1.compartment.oc1..example
+OCI_AVAILABILITY_DOMAIN=kIdk:AP-SYDNEY-1-AD-1
+OCI_INSTANCE_SHAPE=VM.Standard.A1.Flex
+OCI_SHAPE_OCPUS=1
+OCI_SHAPE_MEMORY_GBS=6
+# OCI_FAULT_DOMAIN=FAULT-DOMAIN-1
+# OCI_SHAPE_BASELINE_OCPU_UTILIZATION=BASELINE_1_1
+
+# Notifications / control
+DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...
+MANUAL_RUN_TOKEN=replace-me
+
+# Behavior
+COOLDOWN_MINUTES=5
+FAILURE_ALERT_WINDOW_HOURS=3
+SUCCESS_NOTIFY_LOOKBACK_MINUTES=999
+FAILURE_NOTIFY_LOOKBACK_MINUTES=15
