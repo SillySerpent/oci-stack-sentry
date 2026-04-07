@@ -3,6 +3,21 @@ main = "build/worker/shim.mjs"
 compatibility_date = "2026-04-07"
 workers_dev = true
 
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = true
+persist = true
+head_sampling_rate = 1
+
 
 [triggers]
 crons = ["* * * * *"]
